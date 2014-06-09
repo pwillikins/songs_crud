@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get '/', to: 'songs#index'
+  resources :songs
 
-  get '/new', to: 'songs#new'
 
-  post '/', to: 'songs#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
