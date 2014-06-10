@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/pwillikins/songs_crud.svg?branch=master)](https://travis-ci.org/pwillikins/songs_crud)
+
 ## Background
 
 An application created to practice CRUD including TDD.
