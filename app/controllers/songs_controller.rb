@@ -31,4 +31,9 @@ class SongsController < ApplicationController
     Song.update(id, artist_name: params[:artist_name], song_name: params[:song_name])
     redirect_to songs_path
   end
+
+  def destroy
+    Song.find(params[:id]).destroy
+    redirect_to songs_path
+  end
 end

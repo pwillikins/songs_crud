@@ -34,4 +34,16 @@ feature 'homepage' do
     click_on 'Save'
     expect(page).to have_content 'Do the Trick'
   end
+
+  scenario 'user can delete a song' do
+    visit '/songs'
+    click_on 'Add New Song'
+    fill_in 'song_name', with: 'Lonesome'
+    fill_in 'artist_name', with: 'Dr Dog'
+    click_on 'Save'
+    click_link 'Lonesome'
+    click_on 'Delete'
+    expect(page).to have_content 'Song List'
+    expect(page).to_not have_content 'Lonesome'
+  end
 end
